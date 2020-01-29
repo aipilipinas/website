@@ -1,21 +1,33 @@
 <app-navbar></app-navbar>
-<!--img src="/assets/images/heroimage.png" class="hero-image"-->
 <div class="jumboImage jumbo"></div>
-<div class="container breather" id="about-us">
-    <div style="margin-left: 20%; margin-right: 20%; margin-top: 5%;">
-        <h1>About Us</h1>
+<div class="container breather">
+
+    <app-section #aboutus sectionTitle="About Us">
         <p style="text-overflow: clip; word-wrap: break-word; font-size: 15pt;">
         We are a community of Filipinos who are continuously upskilling tech capabilities and learn Machine Learning/Artificial Intelligence. These skills can either be used for research purposes and/or developing and deploying end-to-end solutions.<br><br>
         This community is open to different skill levels and educational backgrounds. This group aims to build a community of AI researchers and engineers and promote a collaborative exchange of knowledge, best practices, and tips in applying machine learning. Making the Philippines one of the globally recognized leaders and experts in AI.
         </p>
-    </div>
+    </app-section>
 
-    <div style="margin-left: 20%; margin-right: 20%; padding-top: 5%;" id="events">
-        <h1>Events</h1>
+    <app-section #events sectionTitle="Events">
+
+        <!-- card1 -->
+        <div class="card" style="background-image: url('/assets/images/meetup.jpg'); background-repeat: no-repeat; background-position: right center; background-size: cover;">
+            <div class="card-content" style="display: flex; flex-wrap: nowrap;">
+                <div class="desktop-only" style="margin-right: 40%;"></div>
+                <div>
+                    <p style="font-size: 20pt; background-color: aliceblue; opacity: 0.8; padding: 20px; border-radius: 12px;">Visit our Meetup Page<br>for the latest events</p>
+                    <a class="card-button" href="https://meetup.com/AIPilipinas/events" style="background-color: #BD303A;" title="Visit our Meetup Page">Visit Meetup</a>
+                </div>
+            </div>
+        </div>
+        <!-- .card1 -->
+
+        <!-- card2 -->
         <div class="card">
             <div class="card-content" style="display: flex; flex-wrap: nowrap;">
                 <div class="desktop-only" style="margin-right: 30%">
-                    <svg width="100" viewBox="0 0 225 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <svg width="100" viewBox="0 0 225 430" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M130 45.5L67.75 90.9663V0.0336643L130 45.5Z" fill="#FA5254"/>
                         <path d="M225 123.5L162.75 168.966V78.0337L225 123.5Z" fill="#FAC346"/>
                         <path d="M225 264.5L162.75 309.966V219.034L225 264.5Z" fill="#FAC346"/>
@@ -30,7 +42,9 @@
                 </div>
             </div>
         </div>
+        <!-- .card2 -->
 
+        <!-- card3 -->
         <div class="card" style="background-image: url('/assets/images/mlhackfest_bg.png');">
             <div class="card-content" style="display: flex; flex-wrap: nowrap;">
                 <div class="desktop-only" style="margin-right: 40%">
@@ -42,21 +56,17 @@
                 </div>
             </div>
         </div>
+        <!-- .card3 -->
 
-        <div class="card" style="background-image: url('/assets/images/meetup.jpg'); background-repeat: no-repeat; background-position: right center; background-size: cover;">
-            <div class="card-content" style="display: flex; flex-wrap: nowrap;">
-                <div class="desktop-only" style="margin-right: 40%;"></div>
-                <div>
-                    <p style="font-size: 20pt; background-color: aliceblue; opacity: 0.8; padding: 20px; border-radius: 12px;">Visit our Meetup Page<br>for the latest events</p>
-                    <a class="card-button" href="https://meetup.com/AIPilipinas/events" style="background-color: #BD303A;" title="Visit our Meetup Page">Visit Meetup</a>
-                </div>
-            </div>
-        </div>
+        <!-- 
 
-    </div>
+            ADD CARDS HERE
 
-    <div style="margin-left: 20%; margin-right: 20%; padding-top: 5%;" id="community-guidelines">
-        <h1>Community Guidelines</h1>
+        -->
+        
+    </app-section>
+
+    <app-section #communityguidelines sectionTitle="Community Guidelines">
         <p style="text-overflow: clip; word-wrap: break-word; font-size: 15pt;">
             - Be nice. We're all part of the same community, so be friendly, be welcoming, and generally be a nice person.<br><br>
             - Be someone that other people want to be around.<br><br>            
@@ -64,60 +74,30 @@
             - Be collaborative. Work together! We can learn a lot from each other. Share knowledge, update the wiki, help each other out.<br><br>            
             - Participate. This is YOUR community, so be a part of it! Join in on discussions, show up for in-person meetings regularly, offer feedback, and offer to help implement that feedback!            
         </p>
-    </div>
+    </app-section>
 
-    <div style="margin-left: 20%; margin-right: 20%; padding-top: 5%;" id="partners">
-        <h1>Partners & Supporters</h1>
-        <div style="display:flex; align-items: center; margin-top: 10%; flex-wrap: wrap; width: 100%;">
-            <div style="margin: 0 auto;">
-                <a href="https://senti.ai/" title="Visit Senti AI Website">
-                    <img src="/assets/images/partners/senti.png" width="150px" style="margin-right: 20px; margin-bottom: 20px;">
-                </a>
-            </div>
-            <div style="margin: 0 auto;">
-                <a href="https://google.com" title="Visit Google.com">
-                    <img src="/assets/images/partners/google.png" width="150px" style="margin-right: 20px; margin-bottom: 20px;">
-                </a>
-            </div>
-            <div style="margin: 0 auto;">
-                <a href="https://www.deeplearning.ai" title="Deeplearning AI">
-                    <img src="/assets/images/partners/deeplearningai.png" width="150px" style="margin-right: 20px; margin-bottom: 20px;">
-                </a>
-            </div>
-        </div>
-    </div>
+    <app-section #partners sectionTitle="Partners & Supporters">
+        <app-partner-container>
+            <app-partner title="Senti AI Website" siteUrl="https://senti.ai" imageUrl="/assets/images/partners/senti.png"></app-partner>
+            <app-partner title="Google.com" siteUrl="https://google.com" imageUrl="/assets/images/partners/google.png"></app-partner>
+            <app-partner title="Deeplearning AI" siteUrl="https://www.deeplearning.ai" imageUrl="/assets/images/partners/deeplearningai.png"></app-partner>    
+            <!--
 
-    <div style="margin-left: 20%; margin-right: 20%; padding-top: 5%;" id="team">
-        <h1>Team</h1>
+                ADD PARTNERS AND SPONSORS HERE
 
-        <div class="person-container">
-            <div class="person">
-                <img src="/assets/images/team/ralph.jpg" style="border-radius: 100px" width="200px">
-                <h4>Ralph Regalado</h4>
-                <p>Community Lead</p>
-            </div>
-        </div>
-        <div class="person-container">
-            <div class="person">
-                <img src="/assets/images/team/justine.jpg" style="border-radius: 100px" width="200px">
-                <h4>Justine Clemente</h4>
-                <p>Community Volunteer</p>
-            </div>
-            <div class="person">
-                <img src="/assets/images/team/kristine.jpg" style="border-radius: 100px" width="200px">
-                <h4>Kristine Adlaon</h4>
-                <p>Community Volunteer</p>
-            </div>
-            <div class="person">
-                <img src="/assets/images/team/chad.jpg" style="border-radius: 100px" width="200px">
-                <h4>Richard Ricardo</h4>
-                <p>Community Volunteer</p>
-            </div>
-        </div>
+            -->
+        </app-partner-container>
+    </app-section>
 
-
-    </div>
-    
+    <app-section #team sectionTitle="Team">
+        <app-person-container>
+            <app-person imageUrl="/assets/images/team/ralph.jpg" fullName="Ralph Regalado" position="Community Lead"></app-person>
+            <app-person imageUrl="/assets/images/team/justine.jpg" fullName="Justine Clemente"></app-person>
+            <app-person imageUrl="/assets/images/team/kristine.jpg" fullName="Kristine Adlaon"></app-person>
+            <app-person imageUrl="/assets/images/team/chad.jpg" fullName="Richard Ricardo"></app-person>
+            <!-- ADD A TEAM MEMBER HERE -->
+        </app-person-container>
+    </app-section>
 </div>
 
 <app-footer></app-footer>

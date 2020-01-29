@@ -56,27 +56,6 @@
     padding-right: 40px;
 }
 
-.person-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.person {
-    text-align: center;
-    margin: 0 auto;
-}
-
-.person > h4 {
-    margin-bottom: 0;
-}
-
-.person > p {
-    margin-top: 2px;
-}
-
 .mobile-only {
     display: none;
 }
