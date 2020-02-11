@@ -1,15 +1,23 @@
 <app-navbar></app-navbar>
-<div class="jumboImage jumbo"></div>
+<div class="jumboImage jumbo">
+    <div style="position: relative; top: 150px; left: 80px; max-width: 400px; background-color: #F6F7F9; padding: 20px; border-radius: 12px;" class="desktop-only">
+        <h3>About AI Pilipinas</h3>
+        <p style="text-overflow: clip; word-wrap: break-word; font-size: 15pt;">
+            We are a community of Filipinos who are continuously upskilling tech capabilities and learn Machine Learning/Artificial Intelligence. These skills can either be used for research purposes and/or developing and deploying end-to-end solutions.<br><br>
+            This community is open to different skill levels and educational backgrounds. This group aims to build a community of AI researchers and engineers and promote a collaborative exchange of knowledge, best practices, and tips in applying machine learning. Making the Philippines one of the globally recognized leaders and experts in AI.
+        </p>
+    </div>
+</div>
 <div class="container breather">
 
-    <app-section #aboutus sectionTitle="About Us">
+    <app-section #aboutus sectionTitle="About Us" id="about-us" class="mobile-only">
         <p style="text-overflow: clip; word-wrap: break-word; font-size: 15pt;">
         We are a community of Filipinos who are continuously upskilling tech capabilities and learn Machine Learning/Artificial Intelligence. These skills can either be used for research purposes and/or developing and deploying end-to-end solutions.<br><br>
         This community is open to different skill levels and educational backgrounds. This group aims to build a community of AI researchers and engineers and promote a collaborative exchange of knowledge, best practices, and tips in applying machine learning. Making the Philippines one of the globally recognized leaders and experts in AI.
         </p>
     </app-section>
 
-    <app-section #events sectionTitle="Events">
+    <app-section #events sectionTitle="Events" id="events">
 
         <!-- card1 -->
         <div class="card" style="background-image: url('/assets/images/meetup.jpg'); background-repeat: no-repeat; background-position: right center; background-size: cover;">
@@ -27,7 +35,7 @@
         <div class="card">
             <div class="card-content" style="display: flex; flex-wrap: nowrap;">
                 <div class="desktop-only" style="margin-right: 30%">
-                     <svg width="100" viewBox="0 0 225 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="100" viewBox="0 0 225 430" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M130 45.5L67.75 90.9663V0.0336643L130 45.5Z" fill="#FA5254"/>
                         <path d="M225 123.5L162.75 168.966V78.0337L225 123.5Z" fill="#FAC346"/>
                         <path d="M225 264.5L162.75 309.966V219.034L225 264.5Z" fill="#FAC346"/>
@@ -66,7 +74,7 @@
         
     </app-section>
 
-    <app-section #communityguidelines sectionTitle="Community Guidelines">
+    <app-section #communityguidelines sectionTitle="Community Guidelines" id="communityguidelines">
         <p style="text-overflow: clip; word-wrap: break-word; font-size: 15pt;">
             - Be nice. We're all part of the same community, so be friendly, be welcoming, and generally be a nice person.<br><br>
             - Be someone that other people want to be around.<br><br>            
@@ -76,7 +84,7 @@
         </p>
     </app-section>
 
-    <app-section #partners sectionTitle="Partners & Supporters">
+    <app-section #partners sectionTitle="Partners & Supporters" id="partners">
         <app-partner-container>
             <app-partner title="Senti AI Website" siteUrl="https://senti.ai" imageUrl="/assets/images/partners/senti.png"></app-partner>
             <app-partner title="Google.com" siteUrl="https://google.com" imageUrl="/assets/images/partners/google.png"></app-partner>
@@ -89,7 +97,7 @@
         </app-partner-container>
     </app-section>
 
-    <app-section #team sectionTitle="Team">
+    <app-section #team sectionTitle="Team" id="team">
         <app-person-container>
             <app-person imageUrl="/assets/images/team/ralph.jpg" fullName="Ralph Regalado" position="Community Lead"></app-person>
             <app-person imageUrl="/assets/images/team/justine.jpg" fullName="Justine Clemente"></app-person>
