@@ -1,1 +1,1 @@
-# ai-pilipinas.github.io
+# aipilipinas.github.io
